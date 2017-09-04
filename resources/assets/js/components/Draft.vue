@@ -107,7 +107,7 @@
 		    		clearInterval(this.interval)
 		    		return;
 		    	}
-		    	this.date = moment().add(5, 'seconds').toDate();
+		    	this.date = moment().add(30, 'seconds').toDate();
 		    	this.interval = setInterval(() => {
 			       this.now = new Date()
 			    }, 1000)
@@ -122,7 +122,7 @@
 		    		alert('You Need to Bid Higher!');
 		    		return;
 		    	}
-		    	this.date = moment().add(5, 'seconds').toDate();
+		    	this.date = moment().add(15, 'seconds').toDate();
 		    	axios.post('/save_bid', {
 		            id: this.user.id,
 		            amount: this.bid

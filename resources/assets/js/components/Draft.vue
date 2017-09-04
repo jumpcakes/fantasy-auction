@@ -107,7 +107,7 @@
 		    		clearInterval(this.interval)
 		    		return;
 		    	}
-		    	this.date = moment().add(10, 'seconds').toDate();
+		    	this.date = moment().add(100, 'seconds').toDate();
 		    	this.interval = setInterval(() => {
 			       this.now = new Date()
 			    }, 1000)

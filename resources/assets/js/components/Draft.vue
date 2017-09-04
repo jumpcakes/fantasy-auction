@@ -107,7 +107,7 @@
 		    		clearInterval(this.interval)
 		    		return;
 		    	}
-		    	this.date = moment().add(100, 'seconds').toDate();
+		    	this.date = moment().add(30, 'seconds').toDate();
 		    	this.interval = setInterval(() => {
 			       this.now = new Date()
 			    }, 1000)
@@ -118,11 +118,17 @@
 		    		alert('Your Bid is Higher than Your Max Bid');
 		    		return;
 		    	}
+		    	if(this.bid > this.highBidAmount) {
+		    		alert('You Need to Bid Higher!');
+		    		return;
+		    	}
+		    	this.date = moment().add(20, 'seconds').toDate();
 		    	axios.post('/save_bid', {
 		            id: this.user.id,
 		            amount: this.bid
 		          })
 		          .then(function (response) {
+
 		            console.log(response);
 		          })
 		          .catch(function (error) {

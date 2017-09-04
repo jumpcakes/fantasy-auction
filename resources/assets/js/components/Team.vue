@@ -29,6 +29,7 @@
             var channel = this.$pusher.subscribe('my-channel');
      
             channel.bind('my-event', function(data) {
+                alert('ehy')
                 this.message = data.message;
             }.bind(this));
         },

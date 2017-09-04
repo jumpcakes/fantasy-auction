@@ -28,7 +28,7 @@
             var channel = this.$pusher.subscribe('my-channel');
      
             channel.bind('my-event', function(data) {
-                this.messages.push({note: data.message, user: this.user.team_name});
+                this.messages.push({note: data.message, user: data.user.team_name});
             }.bind(this));
         },
 

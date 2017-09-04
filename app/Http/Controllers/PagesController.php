@@ -7,6 +7,7 @@ use Pusher;
 use App\Auction;
 use App\DraftOrder;
 use App\Draft;
+use Auth;
 
 
 class PagesController extends Controller
@@ -26,6 +27,7 @@ class PagesController extends Controller
 		);
 
 		$data['message'] = $request->message;
+		$data['user'] = Auth::user();
 		$pusher->trigger('my-channel', 'my-event', $data);
 		return 'pushed';
     }

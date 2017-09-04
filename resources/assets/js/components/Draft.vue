@@ -48,7 +48,7 @@
 		        	<current-teams :teams="currentTeams"></current-teams>
 		        </div>
 		        <div class="col-md-4">
-	        		<wall></wall>
+	        		<wall :user="user"></wall>
 	        	</div>
 	        </div>
         </div>

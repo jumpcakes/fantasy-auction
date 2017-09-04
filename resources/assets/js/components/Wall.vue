@@ -28,7 +28,7 @@
             var channel = this.$pusher.subscribe('my-channel');
      
             channel.bind('my-event', function(data) {
-                this.messages.push({note: data.message, user: 'Cheez-Lee'});
+                this.messages.push({note: data.message, user: user.name});
             }.bind(this));
         },
 
@@ -59,7 +59,9 @@
                   });
 
             }
-        }
+        },
+
+        props: ['user']
     }
 </script>
 

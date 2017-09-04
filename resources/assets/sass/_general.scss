@@ -1,0 +1,132 @@
+html, body {
+    background-color: #9AB9CD;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+}
+
+.admin-menu {
+    background: #3097D1;
+    text-align: center;
+    padding: 10px;
+    min-height: 57px;
+}
+
+    .modal-body .custom-actions button.ui.button {
+        padding: 1px 11px;
+        font-size: 20px;
+        color: #fff;
+        background: #489167;
+    }
+
+    .player-on-auction-container {
+        background: #afafaf;
+        padding: 34px;
+        font-size: 22px;
+    }
+
+    .current-player {
+        font-size: 26px;
+        margin-top: 0;
+    }
+
+    .main-menu {
+        background: #ccc;
+        height: 100px;
+        h1 {
+            color: #7b7b7b;
+            font-size: 46px;
+        }
+    }
+
+    .main-menu  .links > a {
+        padding: 0;
+    }
+
+    .main-menu .top-right {
+        position: relative;
+        text-align: right;
+    }
+
+    .title {
+        background-color: #ccc;
+        border-bottom: 30px solid #277DBA;
+    }
+
+    .main-page-container {
+         background: #fff;
+         padding: 20px;
+    }
+
+    .full-height {
+        height: 100vh;
+    }
+
+    .flex-center {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .position-ref {
+        position: relative;
+    }
+
+    .message-container {
+        margin-bottom: 20px;
+        height: 380px;
+        overflow-y: scroll;
+    }
+
+    footer {
+        padding: 40px 0;
+        text-align: center;
+        background: #ccc;
+    }
+
+    .top-right {
+        position: absolute;
+        right: 10px;
+        top: 18px;
+    }
+
+    .panel-default {
+        padding: 0px;
+    }
+
+    .message-input {
+        width: 75%;
+        display: inline-block;
+    }
+
+    .title {
+        font-size: 84px;
+    }
+
+    .links > a {
+        color: #636b6f;
+        padding: 0 25px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .m-b-md {
+        margin-bottom: 30px;
+    }
+
+    .current-teams {
+        text-align: left;
+    }
+
+$breakpoint-phone: 767px;
+@media (max-width: $breakpoint-phone) {
+    .main-menu h1 {
+        display: none;
+    }
+
+}

@@ -118,7 +118,7 @@
 		    		alert('Your Bid is Higher than Your Max Bid');
 		    		return;
 		    	}
-		    	if(this.bid > this.highBidAmount) {
+		    	if(this.bid <= this.highBidAmount) {
 		    		alert('You Need to Bid Higher!');
 		    		return;
 		    	}

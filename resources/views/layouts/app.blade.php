@@ -41,8 +41,10 @@
                 </div>
             </div>
             <div class="admin-menu">
-                @if(Auth::user()->id ===1)
-                    <button @click="startDraft" class="btn btn-primary">Prompt Next Pick</button>
+                @if(Auth::user()) 
+                    @if(Auth::user()->id ===1)
+                        <button @click="startDraft" class="btn btn-primary">Prompt Next Pick</button>
+                    @endif
                 @endif
             </div>
             @yield('content')

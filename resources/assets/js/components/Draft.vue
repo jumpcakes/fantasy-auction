@@ -118,11 +118,7 @@
 		    		alert('Your Bid is Higher than Your Max Bid');
 		    		return;
 		    	}
-		    	if(this.bid <= this.highBidAmount) {
-		    		alert('You Need to Bid Higher!');
-		    		return;
-		    	}
-		    	this.date = moment().add(15, 'seconds').toDate();
+		    	this.date = moment().add(25, 'seconds').toDate();
 		    	axios.post('/save_bid', {
 		            id: this.user.id,
 		            amount: this.bid

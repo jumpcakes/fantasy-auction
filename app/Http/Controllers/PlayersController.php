@@ -87,35 +87,35 @@ class PlayersController extends Controller
 
     public function auctionWinner(Request $request) 
     {
-        $user = User::where('id',$request->id)->first();
-        $player = Player::where('id',$request->player['id'])->first();
-        if($user->players()->where('player_id',$player->id)->count() ===0) {
-            $user->players()->attach($player->id);
-            $userMoney = ($user->money - $request->amount);
-            $player->update(['salary'=>$request->amount,'taken'=>1]);
-            $user->update(['money'=>$userMoney]);
-        }
+     //    $user = User::where('id',$request->id)->first();
+     //    $player = Player::where('id',$request->player['id'])->first();
+     //    if($user->players()->where('player_id',$player->id)->count() ===0) {
+     //        $user->players()->attach($player->id);
+     //        $userMoney = ($user->money - $request->amount);
+     //        $player->update(['salary'=>$request->amount,'taken'=>1]);
+     //        $user->update(['money'=>$userMoney]);
+     //    }
 
-        $options = array(
-            'cluster' => 'us2',
-            'encrypted' => true
-        );
+     //    $options = array(
+     //        'cluster' => 'us2',
+     //        'encrypted' => true
+     //    );
 
-        $pusher = new Pusher\Pusher(
-            '13d6291867576b0aa8ac',
-            '77251cbefd5458cbe35a',
-            '392790',
-            $options
-        );
+     //    $pusher = new Pusher\Pusher(
+     //        '13d6291867576b0aa8ac',
+     //        '77251cbefd5458cbe35a',
+     //        '392790',
+     //        $options
+     //    );
 
-        $users = User::all();
-        $users->load('players');
+     //    $users = User::all();
+     //    $users->load('players');
 
-        $data['teams'] = $users;
-        $data['maxBid'] = Auth::user()->getMaxBid();
-        $pusher->trigger('pick-channel', 'auction-won', $data);
+     //    $data['teams'] = $users;
+     //    $data['maxBid'] = Auth::user()->getMaxBid();
+     //    $pusher->trigger('pick-channel', 'auction-won', $data);
 
-    	return $request->all();
+    	// return $request->all();
     }
 
     public function maxBid(User $user) 
